@@ -5,7 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.dom4j.Attribute;
 import org.dom4j.Document;
@@ -14,6 +16,7 @@ import org.dom4j.Element;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
+import org.dom4j.tree.DefaultProcessingInstruction;
 
 public class XMLFactory {
 
@@ -31,9 +34,17 @@ public class XMLFactory {
 		try {
 			// 读取已存在的Xml文件person.xml
 			Document doc = new SAXReader().read(new File(XML_TEMPLATE));
+			
+			//设定指令集
+			DefaultProcessingInstruction dpi =  (DefaultProcessingInstruction) doc.selectSingleNode("//processing-instruction()[name()='xml-stylesheet']");
+			Map<String, String> values = new HashMap<String, String>();
+			values.put("type", "text/xls");
+			values.put("href", "file://10.119.25.222/d\\womatAutotest/tools/xs/template/womatTestReportTempate.xls");
+			dpi.setValues(values);
 
 			// 获取根节点
 			Element root = doc.getRootElement();
+			
 
 			// 获取case节点
 			Element caseNode = (Element) doc.selectSingleNode("/root/suite/case");
