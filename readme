@@ -2,4 +2,3 @@
 2、case.xml为模板文件，可以修改，但不能删除。data.xls为03版本excel原始数据文件，实际路径可修改。
 3、测试时需要在resources目录下新建result空目录。线上部署以xml实际路径为准。
 4、文件输出为每个用例一个xml，名称均为用例的id。
-5、xml-stylesheet未修改，没有找到解决方案。
