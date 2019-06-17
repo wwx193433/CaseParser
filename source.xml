@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="file://10.119.25.222/d\womatAutotest/tools/xs/template/womatTestReportTempate.xls" ?>
+<root>
+  <suite name = "M2000-&gt;性能-&gt;网上问题">
+    <Case author="gwx111111" id = "20190122-10000602-908635" ip="10.119.148.187" memo="" name="特殊balabala..." serverIp="10.185.198.92"
+                  suit="balabala" times="1" tmssId="1">
+      <detail/>
+      <memo/>
+      <attach/>
+      <result autho="balabala" info = "Failed" name="result" times="1">
+        <detail>{15sec} StartTime: 2019-04-04 11:02:28 EndTime:2019-04-04 11:02:43,Last: 0d 0h 0min 15sec 694msec</detail/>
+        <memo/>
+        <attach/>
+        <checkpoints>
+          <checkpoint info = "Failed">
+            <detail>执行测试逻辑</detail>
+            <memo><![CDATA[发生异常： com.huawei ....balabala]]></memo>
+            <attach/>
+          </checkpoint>
+        </checkpoints>
+      </result>
+    </Case>
+  </suite>
+  <summary block="0" end="2019-05-31 18:14:15" fail="1" failAuthor="" pass="0" serverIp="10.185.x.x" 
+                start="2019-xx-xx" time="0d 0hr 0min 10sec 10sec" total = "1" version="U2020V300R019C10B041"/>
+</root>
